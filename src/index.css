@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  .desktop-display{
+    @apply font-inter font-semibold text-[60px] leading-[97px] tracking-[-2,2%]
+  }
+  .desktop-h1{
+    @apply font-inter font-medium text-[48px] leading-[59px] tracking-[-2,2%]
+  }
+  .desktop-h2{
+    @apply font-inter font-medium text-[36px] leading-[44px] tracking-[-2,2%]
+  }
+  .desktop-h3{
+    @apply font-inter font-medium text-[30px] leading-[36px] tracking-[-2,1%]
+  }
+  .desktop-h4{
+    @apply font-inter font-medium text-[24px] leading-[29px] tracking-[-1,9%]
+  }
+  .desktop-h5{
+    @apply font-inter font-medium text-[20px] leading-[24px] tracking-[-1,7%]
+  }
+  .mobile-display{
+    @apply font-inter font-semibold text-[40px] leading-[49px] tracking-[-2,2%]
+  }
+  .mobile-h1{
+    @apply font-inter font-medium text-[36px] leading-[44px] tracking-[-2,2%]
+  }
+  .mobile-h2{
+    @apply font-inter font-medium text-[30px] leading-[36px] tracking-[-2,1%]
+  }
+  .mobile-h3{
+    @apply font-inter font-medium text-[24px] leading-[29px] tracking-[-1,9%]
+  }
+  .mobile-h4{
+    @apply font-inter font-medium text-[20px] leading-[24px] tracking-[-1,7%]
+  }
+  .text-xs-normal{
+    @apply font-inter font-normal text-[12px] leading-[15px] tracking-[0%]
+  }
+  .text-xs-medium{
+    @apply font-inter font-medium text-[12px] leading-[15px] tracking-[0]
+  }
+  .text-xs-bold{
+    @apply font-inter font-bold text-[12px] leading-[15px] tracking-[0]
+  }
+  .text-xs-italic{
+    @apply font-inter italic text-[12px] font-normal leading-[15px] tracking-[0%]
+  }
+  .text-sm-normal{
+    @apply font-inter font-normal text-[14px] leading-[17px] tracking-[-0,6%]
+  }
+  .text-sm-medium{
+    @apply font-inter font-medium text-[14px] leading-[17px] tracking-[-0,6%]
+  }
+  .text-sm-bold{
+    @apply font-inter font-bold text-[14px] leading-[17px] tracking-[-0,6%]
+  }
+  .text-sm-italic{
+    @apply font-inter italic font-normal text-[14px] leading-[17px] tracking-[-0,6%]
+  }
+  .text-base-normal{
+    @apply font-inter font-normal text-[16px] leading-[20px] tracking-[-1,1%]
+  }
+  .text-base-medium{
+    @apply font-inter font-medium text-[16px] leading-[20px] tracking-[-1,1%]
+  }
+  .text-base-bold{
+    @apply font-inter font-bold text-[16px] leading-[20px] tracking-[-1,1%]
+  }
+  .text-base-italic{
+    @apply font-inter italic font-normal text-[16px] leading-[20px] tracking-[-1,1%]
+  }
+  .text-lg-normal{
+    @apply font-inter font-normal text-[18px] leading-[21px] tracking-[-1,4%]
+  }
+  .text-lg-medium{
+    @apply font-inter font-medium text-[18px] leading-[21px] tracking-[-1,4%]
+  }
+  .text-lg-bold{
+    @apply font-inter font-bold text-[18px] leading-[21px] tracking-[-1,4%]
+  }
+  .text-lg-italic{
+    @apply font-inter italic font-normal text-[18px] leading-[21px] tracking-[-1,4%]
+  }
+  .breakpoint-xl{
+    @apply grid grid-cols-12 gap-[32px] m-[112px]
+  }
+  .breakpoint-base{
+    @apply grid columns-4 gap-[16px] m-[16px]
+  }
+  .navbar{
+    @apply flex justify-end items-center w-full h-6
+  }
+  .hamburger-menu{
+    @apply flex flex-col justify-between cursor-pointer w-7 h-6
+  }
+  .bar{
+    @apply w-full h-[2px] bg-secondary-600 transition-transform duration-300
+  }
+  .change .bar:nth-child(1) {
+    transform: translateY(11px) rotate(-45deg)
+  }
+  .change .bar:nth-child(2){
+    opacity: 0
+  }
+  .change .bar:nth-child(3) {
+    transform: translateY(-11px) rotate(45deg)
+  }
+  .line{
+    @apply w-full h-[2px] bg-brand-400 
+  }
+}
