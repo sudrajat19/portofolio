@@ -66,6 +66,7 @@ export default function AddUsers() {
     formData.append("profesi", newUsers.profesi);
     formData.append("email", newUsers.email);
     formData.append("role", newUsers.role);
+    
 
     if (newUsers.photo) {
       formData.append("photo", newUsers.photo);
