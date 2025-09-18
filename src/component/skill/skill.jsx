@@ -1,3 +1,4 @@
+import restapi from "../../assets/gambar/7955-rest-api.svg";
 export default function Skill() {
   const skills = [
     {
@@ -46,7 +47,7 @@ export default function Skill() {
     },
     {
       name: "Rest API",
-      logo: "./src/assets/gambar/7955-rest-api.svg",
+      logo: restapi,
     },
     {
       name: "Redux",
