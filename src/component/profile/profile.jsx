@@ -7,6 +7,7 @@ import logoTailwindcss from "../../assets/gambar/tailwind.png";
 import logoWa1 from "../../assets/gambar/wa1.png";
 import postgreSql from "../../assets/gambar/postgresql.png";
 import logoIg from "../../assets/gambar/instagram.png";
+import menobg from "../../assets/gambar/menobg.png";
 
 export default function Profile() {
   return (
@@ -40,7 +41,7 @@ export default function Profile() {
           <div>
             <img src={" ./src/assets/gambar/me.jpg"} className="w-full py-4 md:max-w-[324px] md:max-h-[300px]  lg:hidden rounded-lg" alt="error" />
           </div>
-          <img src={" ../../assets/gambar/menobg.png"} className="w-full h-[75%] hidden lg:block" alt="error" />
+          <img src={menobg} className="w-full h-[75%] hidden lg:block" alt="error" />
         </div>
       </div>
       <div className="flex  md:hidden px-[20px] md:px-[100px]  w-full ">
