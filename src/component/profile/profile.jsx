@@ -40,7 +40,7 @@ export default function Profile() {
           <div>
             <img src={" ./src/assets/gambar/me.jpg"} className="w-full py-4 md:max-w-[324px] md:max-h-[300px]  lg:hidden rounded-lg" alt="error" />
           </div>
-          <img src={" ./src/assets/gambar/menobg.png"} className="w-full h-[75%] hidden lg:block" alt="error" />
+          <img src={" ../../assets/gambar/menobg.png"} className="w-full h-[75%] hidden lg:block" alt="error" />
         </div>
       </div>
       <div className="flex  md:hidden px-[20px] md:px-[100px]  w-full ">
