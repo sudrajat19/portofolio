@@ -1,5 +1,6 @@
 import axios from "axios";
-
+import logoWa from "../../assets/gambar/wa2.png";
+import logoIg from "../../assets/gambar/instagram.png";
 export default function Contact() {
   const fetchData = async () => {
     try {
@@ -13,13 +14,13 @@ export default function Contact() {
   const contacts = [
     {
       id: 1,
-      icon: "./src/assets/gambar/instagram.png",
+      icon: logoIg,
       link: "https://www.instagram.com/sudrajats504/",
       value: "@sudrajats504",
     },
     {
       id: 2,
-      icon: "./src/assets/gambar/wa2.png",
+      icon: logoWa,
       link: "https://api.whatsapp.com/send/?phone=6285946652309&text&type=phone_number&app_absent=0",
       value: "085946652309",
     },

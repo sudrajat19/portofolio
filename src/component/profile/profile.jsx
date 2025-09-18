@@ -8,6 +8,7 @@ import logoWa1 from "../../assets/gambar/wa1.png";
 import postgreSql from "../../assets/gambar/postgresql.png";
 import logoIg from "../../assets/gambar/instagram.png";
 import menobg from "../../assets/gambar/menobg.png";
+import me from "../../assets/gambar/me.jpg";
 
 export default function Profile() {
   return (
@@ -39,7 +40,7 @@ export default function Profile() {
         </div>
         <div className="  mx-auto lg:w-[50%] ">
           <div>
-            <img src={" ./src/assets/gambar/me.jpg"} className="w-full py-4 md:max-w-[324px] md:max-h-[300px]  lg:hidden rounded-lg" alt="error" />
+            <img src={me} className="w-full py-4 md:max-w-[324px] md:max-h-[300px]  lg:hidden rounded-lg" alt="error" />
           </div>
           <img src={menobg} className="w-full h-[75%] hidden lg:block" alt="error" />
         </div>

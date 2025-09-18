@@ -1,3 +1,8 @@
+import anteraja from "../../assets/gambar/anteraja.png";
+import portofolio from "../../assets/gambar/portofolio.png";
+import dserve from "../../assets/gambar/dserve.jpg";
+import futsal from "../../assets/gambar/futsal.jpg";
+
 export default function Project() {
   const projects = [
     {
@@ -6,7 +11,7 @@ export default function Project() {
       deskripsi_project: "Developed dashboard for delivery reports using React, Tailwind, and Express. Focused on admin tools and API integration. (2024),A web platform for streamlined report management with a user-friendly interface.",
       link_project: "https://anteraja.vercel.app/",
       usedFramework: ["React.js", "Tailwind CSS", "Express.js", "Node.js", "Postgresql", "Sequelize"],
-      img: " ./src/assets/gambar/anteraja.png",
+      img: anteraja,
       work: "Fullstack",
       note: "Deployed",
     },
@@ -16,7 +21,7 @@ export default function Project() {
       deskripsi_project: "Developed dashboard for delivery reports using React, Tailwind, and Express. Focused on admin tools and API integration. (2024)",
       link_project: "#",
       usedFramework: ["React.js", "Tailwind CSS"],
-      img: " ./src/assets/gambar/portofolio.png",
+      img: portofolio,
       work: "Frontend",
       note: "Deployed",
     },
@@ -27,7 +32,7 @@ export default function Project() {
         "Developed the front-end of D-SERVE, a web application for real-time cafe menu display and ordering. The platform allows users to browse and order, while admins can manage menus and update personal data through a dedicated dashboard.",
       link_project: "#",
       usedFramework: ["Next.js", "Tailwind CSS", "Express.js", "Node.js", "Postgresql", "Sequelize", "Socket.io"],
-      img: " ./src/assets/gambar/dserve.jpg",
+      img: dserve,
       work: "Frontend - Backend",
       note: "Not yet deployed",
     },
@@ -38,7 +43,7 @@ export default function Project() {
         "A futsal booking website is a digital platform that allows players and teams to easily reserve futsal courts online. Instead of manually contacting venues or visiting in person, users can browse available courts, check schedules, compare facilities, and confirm bookings in just a few clicks. This modern solution is designed to simplify the booking process, save time, and enhance the overall futsal experience.",
       link_project: "#",
       usedFramework: ["Next.js", "Tailwind CSS", "Express.js", "Node.js", "Postgresql", "Sequelize", "Socket.io"],
-      img: " ./src/assets/gambar/futsal.jpg",
+      img: futsal,
       work: "Fullstack",
       note: "Not yet deployed",
     },
