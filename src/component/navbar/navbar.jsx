@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import logo from '../../assets/gambar/logos2.png';
+import logo from "../../assets/gambar/logos2.png";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,23 +10,21 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed w-full h-[100px] bg-brand-500 text-slate-100 shadow-lg z-10">
-      <div className="flex justify-between items-center px-6 lg:px-28 py-6">
+    <div className="fixed w-full h-[100px] px-[20px] md:px-[50px] lg:px-[100px] bg-brand-500 text-slate-100 shadow-lg z-10">
+      <div className="flex justify-between items-center   py-6">
         <img className="w-[138px] active:translate-y-1" src={logo} alt="Logo" />
         <ul className="hidden lg:flex items-center gap-10 ">
           <Navigasi />
           <li className="relative bottom-2 block">
-            <button className="bg-secondary-500 text-brand-500 text-sm-medium mt-4 rounded-lg w-[114px] h-[36px]">
-              Download CV
-            </button>
+            <button className="bg-secondary-500 text-brand-500 text-sm-medium mt-4 rounded-lg w-[114px] h-[36px]">Download CV</button>
           </li>
         </ul>
         <div className="lg:hidden">
-          <div className="navbar pr-[112px]">
-            <div className={`hamburger-menu ${isMenuOpen ? 'change' : ''}`} onClick={handleToggleMenu}>
+          <div className="navbar]">
+            <div className={`hamburger-menu ${isMenuOpen ? "change" : ""}`} onClick={handleToggleMenu}>
               <div className="bar"></div>
               <div className="bar"></div>
-              <div className="bar"></div>     
+              <div className="bar"></div>
             </div>
           </div>
         </div>
@@ -37,9 +35,7 @@ export default function Navbar() {
             <ul className="flex flex-col text-sm-bold items-center gap-10">
               <Navigasi />
               <li className="relative bottom-2">
-                <button className="bg-secondary-500 text-brand-500 text-sm-medium mt-4 rounded-lg w-[114px] h-[36px]">
-                  Download CV
-                </button>
+                <button className="bg-secondary-500 text-brand-500 text-sm-medium mt-4 rounded-lg w-[114px] h-[36px]">Download CV</button>
               </li>
             </ul>
           </div>

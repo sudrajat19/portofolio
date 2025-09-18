@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 import Navbar from "./component/navbar/navbar";
 import Profile from "./component/profile/profile";
 import Work from "./component/work/work";
@@ -12,13 +11,13 @@ import Login from "./Users/login";
 import Register from "./Users/register";
 import ContactAdmin from "./component/pages/admin/contactAdmin/contact";
 import EducationAdmin from "./component/pages/admin/educationAdmin/education";
-import ProjectAdmin from './component/pages/admin/projectAdmin/project';
-import SkillAdmin from './component/pages/admin/skillAdmin/skill';
-import UsersAdmin from './component/pages/admin/usersAdmin/users';
-import WorkAdmin from './component/pages/admin/workAdmin/work';
+import ProjectAdmin from "./component/pages/admin/projectAdmin/project";
+import SkillAdmin from "./component/pages/admin/skillAdmin/skill";
+import UsersAdmin from "./component/pages/admin/usersAdmin/users";
+import WorkAdmin from "./component/pages/admin/workAdmin/work";
 import AddContact from "./component/pages/admin/contactAdmin/settingContact";
 import AddEducation from "./component/pages/admin/educationAdmin/settingEducation";
-import AddSkill from './component/pages/admin/skillAdmin/settingSkill'
+import AddSkill from "./component/pages/admin/skillAdmin/settingSkill";
 import AddUsers from "./component/pages/admin/usersAdmin/settingUsers";
 import AddProject from "./component/pages/admin/projectAdmin/settingProject";
 import AddWork from "./component/pages/admin/workAdmin/settingWork";
@@ -28,14 +27,6 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={
-            <>
-              <Navigate to='/1'/>
-            </>
-          }
-        />
-        <Route
-          path="/:id"
           element={
             <>
               <Navbar />
