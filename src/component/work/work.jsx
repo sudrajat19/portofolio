@@ -22,7 +22,7 @@ export default function Work() {
     },
     {
       id_work: 3,
-      nama_perusahaan: "PT Azka Cahaya Puranama",
+      nama_perusahaan: "PT Azka Cahaya Purnama",
       awal_kerja: "2020",
       akhir_kerja: "2022",
       deskripsi_perusahaan:
