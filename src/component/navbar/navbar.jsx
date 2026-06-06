@@ -142,19 +142,16 @@ export default function Navbar() {
     const works = [
       {
         title: "Full-Stack Developer – PT Intellinum",
-        // stack: "Next Js + Tailwindcss + express + sequelize",
         desc: "Developed responsive warehouse management applications and collaborated with teams to improve operational efficiency. Responsibilities included database modeling, inventory control, stock movement tracking, order fulfillment management, and generating warehouse reports.",
         time: "Jun-2025 - Jun-2026",
       },
       {
         title: "Full-Stack Developer – PT Dserve",
-        // stack: "Next Js + Tailwindcss + express + sequelize",
         desc: "Developed responsive web apps and collaborated with teams. Key responsibilities included database modeling, real-time order management, and integrating barcode-based ordering systems.",
         time: "Feb-2024 - Jan-2025",
       },
       {
         title: "Freelance – Web Reporting (AntaraJa)",
-        // stack: "React Js + Tailwindcss + express + sequelize",
         desc: "Developed dashboard for delivery reports using React, Tailwind, and Express. Focused on admin tools and API integration.",
         time: "2024",
       },
@@ -166,8 +163,10 @@ export default function Navbar() {
       rightY += 14;
 
       doc.setFont("helvetica", "italic");
-      doc.text(job.stack, marginLeft + 15, rightY);
-      rightY += 14;
+      if (job.stack) {
+        doc.text(job.stack, marginLeft + 15, rightY);
+        rightY += 14;
+      }
 
       doc.setFont("helvetica", "normal");
       const descSplit = doc.splitTextToSize(job.desc, pageWidth - marginLeft - 40);
