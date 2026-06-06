@@ -2,12 +2,28 @@ import { Link } from "react-scroll";
 import logo from "../../assets/gambar/logos2.png";
 import { useState } from "react";
 import { jsPDF } from "jspdf";
-import Me from "../../assets/gambar/me.jpg";
+import Me from "../../assets/gambar/jajattt.jpeg";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
+    const loadImageToDataUrl = (src) =>
+      new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0);
+          resolve(canvas.toDataURL("image/jpeg"));
+        };
+        img.onerror = reject;
+        img.src = src;
+      });
+
     const doc = new jsPDF("p", "pt", "a4");
     const pageWidth = doc.internal.pageSize.getWidth();
     const pageHeight = doc.internal.pageSize.getHeight();
@@ -23,7 +39,13 @@ export default function Navbar() {
     const imgSize = radius * 2;
     doc.setFillColor(255, 255, 255);
     doc.circle(centerX, centerY, radius, "F");
-    doc.addImage(Me, "JPEG", centerX - radius, centerY - radius, imgSize, imgSize);
+
+    try {
+      const imageData = await loadImageToDataUrl(Me);
+      doc.addImage(imageData, "JPEG", centerX - radius, centerY - radius, imgSize, imgSize);
+    } catch (error) {
+      console.warn("Unable to load CV image, generating PDF without photo.", error);
+    }
 
     // === Helper Sidebar ===
     const drawSidebarSection = (title, items, startY, bullet = true) => {
@@ -50,8 +72,32 @@ export default function Navbar() {
 
     y = drawSidebarSection(
       "Skills",
-      ["HTML", "CSS", "JavaScript", "TailwindCSS", "MySQL", "Rest API", "SASS", "Redux", "Express.js", "Node.js", "Sequelize", "React.js", "Next.js", "PostgreSQL", "Git", "Typescript", "Socket.io", "Database design"],
-      y
+      [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TailwindCSS",
+        "MySQL",
+        "Rest API",
+        "SASS",
+        "Redux",
+        "Express.js",
+        "Node.js",
+        "Sequelize",
+        "Prisma",
+        "React.js",
+        "Next.js",
+        "Nest.js",
+        "Single Page Application (SPA)",
+        "PHP",
+        "Laravel",
+        "PostgreSQL",
+        "Git",
+        "Typescript",
+        "Socket.io",
+        "Database design",
+      ],
+      y,
     );
 
     y = drawSidebarSection("Languages", ["Indonesia (active)", "English (passive)"], y);
@@ -95,14 +141,20 @@ export default function Navbar() {
     rightY = drawRightSection("Work Experiences", rightY);
     const works = [
       {
+        title: "Full-Stack Developer – PT Intellinum",
+        // stack: "Next Js + Tailwindcss + express + sequelize",
+        desc: "Developed responsive warehouse management applications and collaborated with teams to improve operational efficiency. Responsibilities included database modeling, inventory control, stock movement tracking, order fulfillment management, and generating warehouse reports.",
+        time: "Jun-2025 - Jun-2026",
+      },
+      {
         title: "Full-Stack Developer – PT Dserve",
-        stack: "Next Js + Tailwindcss + express + sequelize",
+        // stack: "Next Js + Tailwindcss + express + sequelize",
         desc: "Developed responsive web apps and collaborated with teams. Key responsibilities included database modeling, real-time order management, and integrating barcode-based ordering systems.",
         time: "Feb-2024 - Jan-2025",
       },
       {
         title: "Freelance – Web Reporting (AntaraJa)",
-        stack: "React Js + Tailwindcss + express + sequelize",
+        // stack: "React Js + Tailwindcss + express + sequelize",
         desc: "Developed dashboard for delivery reports using React, Tailwind, and Express. Focused on admin tools and API integration.",
         time: "2024",
       },

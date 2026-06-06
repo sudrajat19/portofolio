@@ -22,6 +22,22 @@ export default function Skill() {
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     },
     {
+      name: "Nest.js",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-original.svg",
+    },
+    {
+      name: "PHP",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    },
+    {
+      name: "Laravel",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+    },
+    {
+      name: "Prisma",
+      logo: "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/prisma.svg",
+    },
+    {
       name: "TypeScript",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     },
@@ -87,7 +103,20 @@ function LogoSkill({ skills }) {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8 lg:gap-12 mt-10 sm:mt-12 md:mt-16 lg:mt-20">
         {skills.map((skill, index) => (
           <div key={index} className="flex flex-col items-center text-white">
-            <img className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" src={skill.logo} alt="skill logo" />
+            <img
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
+              src={skill.logo}
+              alt={`${skill.name} logo`}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                // fallback to alternative CDN if original fails
+                const fallbacks = {
+                  Laravel: "https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/laravel.svg",
+                };
+                const fb = fallbacks[skill.name] || "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg";
+                e.currentTarget.src = fb;
+              }}
+            />
             <p>{skill.name}</p>
           </div>
         ))}
